@@ -4,21 +4,21 @@
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.footerInner {
+.footerContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 48px;
 }
 
-.footerGrid {
+.footerInner {
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
   width: 100%;
 }
 
-.footerBrandCol {
+.footerBrand {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -36,7 +36,7 @@
   object-fit: contain;
 }
 
-.brandText {
+.brandDesc {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
   line-height: 1.6;
@@ -51,12 +51,16 @@
   gap: 16px;
 }
 
-.colTitle {
+.footerHeader {
   font-size: 14px;
   font-weight: 700;
   color: var(--color-gold);
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.headerSpacer {
+  height: 32px;
 }
 
 .linksList {
@@ -82,7 +86,7 @@
   transform: translateX(2px);
 }
 
-.footerBottom {
+.footerCopyContainer {
   width: 100%;
   padding-top: 32px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -98,13 +102,13 @@
 
 /* Responsive Grid */
 @media (min-width: 576px) {
-  .footerGrid {
+  .footerInner {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 992px) {
-  .footerGrid {
+  .footerInner {
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 60px;
   }

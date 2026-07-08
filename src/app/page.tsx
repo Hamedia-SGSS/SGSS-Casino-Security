@@ -45,7 +45,7 @@ export default function CasinoSecurityPage() {
       <section className={styles.hero} id="hero">
         <div className={styles.heroBg}>
           <Image
-            src="/casino_hero.png"
+            src="/casino_hero_upscaled.png"
             alt="Secure Guard officer standing inside a premium casino environment at twilight"
             fill
             className={styles.heroBgImg}
@@ -137,7 +137,7 @@ export default function CasinoSecurityPage() {
           <div className={styles.addonGrid}>
             <div className={styles.addonImageCol}>
               <Image 
-                src="/casino_patrol.png" 
+                src="/casino_patrol_upscaled.png" 
                 alt="Secure Guard officer patrolling casino gaming and entertainment floor" 
                 width={600} 
                 height={500} 

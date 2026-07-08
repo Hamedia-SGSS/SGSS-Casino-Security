@@ -3,46 +3,45 @@ import React from "react";
 import styles from "./Footer.module.css";
 
 const col1Links = [
-  { label: "Apartment", href: "https://www.secureguardservices.com/" },
-  { label: "Business Park", href: "https://www.secureguardservices.com/" },
-  { label: "Airport", href: "https://www.secureguardservices.com/" },
-  { label: "Casino", href: "https://www.secureguardservices.com/" },
-  { label: "Club", href: "https://www.secureguardservices.com/" },
-  { label: "Construction Site", href: "https://www.secureguardservices.com/" },
-  { label: "Educational Institute", href: "https://www.secureguardservices.com/" },
-  { label: "Energy Facility", href: "https://www.secureguardservices.com/" },
-  { label: "Event", href: "https://www.secureguardservices.com/" },
+  { label: "Apartment", href: "https://sgss-apartment-security.vercel.app/" },
+  { label: "Business Park", href: "https://sgss-business-park-security.vercel.app/" },
+  { label: "Airport", href: "https://sgss-airport-security.vercel.app/" },
+  { label: "Casino", href: "https://sgss-casino-security.vercel.app/" },
+  { label: "Club", href: "https://sgss-club-security.vercel.app/" },
+  { label: "Construction Site", href: "https://sgss-construction-site-security.vercel.app/" },
+  { label: "Educational Institute", href: "https://sgss-educational-institute-security.vercel.app/" },
+  { label: "Energy Facility", href: "https://sgss-energy-facility-security.vercel.app/" },
 ];
 
 const col2Links = [
-  { label: "Financial Institution", href: "https://www.secureguardservices.com/" },
-  { label: "Government Facility", href: "https://www.secureguardservices.com/" },
-  { label: "Healthcare Facility", href: "https://www.secureguardservices.com/" },
-  { label: "High Rise", href: "https://www.secureguardservices.com/" },
-  { label: "Homeowners Association", href: "https://www.secureguardservices.com/" },
-  { label: "Hotel", href: "https://www.secureguardservices.com/" },
-  { label: "Mall", href: "https://www.secureguardservices.com/" },
-  { label: "Manufacturing Facility", href: "https://www.secureguardservices.com/" },
+  { label: "Event", href: "https://sgss-event-security-industry.vercel.app/" },
+  { label: "Financial Institution", href: "https://sgss-financial-institution-security.vercel.app/" },
+  { label: "Government Facility", href: "https://sgss-government-facility-security-u.vercel.app/" },
+  { label: "Healthcare Facility", href: "https://sgss-healthcare-facility-security.vercel.app/" },
+  { label: "High Rise", href: "https://sgss-high-rise-security.vercel.app/" },
+  { label: "Homeowners Association", href: "https://sgss-homeowners-association-securit.vercel.app/" },
+  { label: "Hotel", href: "https://sgss-hotel-security.vercel.app/" },
+  { label: "Mall", href: "https://sgss-mall-security.vercel.app/" },
 ];
 
 const col3Links = [
-  { label: "Religious Facility", href: "https://www.secureguardservices.com/" },
-  { label: "Shopping Center", href: "https://www.secureguardservices.com/" },
-  { label: "Sporting Event", href: "https://www.secureguardservices.com/" },
-  { label: "Storage Facility", href: "https://www.secureguardservices.com/" },
-  { label: "Strike/Union Dispute", href: "https://www.secureguardservices.com/" },
-  { label: "Transportation & Logistics Facility", href: "https://www.secureguardservices.com/" },
-  { label: "Vehicle Dealer", href: "https://www.secureguardservices.com/" },
-  { label: "Secure Guard", href: "https://www.secureguardservices.com/" },
+  { label: "Manufacturing Facility", href: "https://sgss-manufacturing-facility-securit.vercel.app/" },
+  { label: "Religious Facility", href: "https://sgss-religious-facility-security.vercel.app/" },
+  { label: "Shopping Center", href: "https://sgss-shopping-center-security.vercel.app/" },
+  { label: "Sporting event", href: "https://sgss-sporting-event-security.vercel.app/" },
+  { label: "Storage Facility", href: "https://sgss-storage-facility-security.vercel.app/" },
+  { label: "Strike/Union Dispute", href: "https://sgss-strike-union-dispute-security.vercel.app/" },
+  { label: "Transportation & Logistics Facility", href: "https://sgss-transportation-logistics-facility-security.vercel.app/" },
+  { label: "Vehicle Dealer", href: "https://sgss-vehicle-dealer-security.vercel.app/" },
 ];
 
 export function Footer() {
   return (
     <footer className={styles.footer} id="footer">
-      <div className={`container ${styles.footerInner}`}>
-        <div className={styles.footerGrid}>
+      <div className={`container ${styles.footerContainer}`}>
+        <div className={styles.footerInner}>
           {/* Column 1: Logo */}
-          <div className={styles.footerBrandCol}>
+          <div className={styles.footerBrand}>
             <Link href="/" className={styles.logoLink}>
               <img
                 src="https://assets.cdn.filesafe.space/ApWkZ2IFXdvkS2AT3Tqg/media/6a0262de60a7a52fdc112210.png"
@@ -50,14 +49,14 @@ export function Footer() {
                 className={styles.logoImg}
               />
             </Link>
-            <p className={styles.brandText}>
+            <p className={styles.brandDesc}>
               Professional security officers, mobile patrols, and access control solutions tailored for your business.
             </p>
           </div>
 
           {/* Column 2: Links */}
           <div className={styles.footerLinksCol}>
-            <h4 className={styles.colTitle}>Industries</h4>
+            <h4 className={styles.footerHeader}>Industries</h4>
             <ul className={styles.linksList}>
               {col1Links.map((link) => (
                 <li key={link.label}>
@@ -71,7 +70,7 @@ export function Footer() {
 
           {/* Column 3: Links */}
           <div className={styles.footerLinksCol}>
-            <h4 className={styles.colTitle}>&nbsp;</h4>
+            <div className={styles.headerSpacer} />
             <ul className={styles.linksList}>
               {col2Links.map((link) => (
                 <li key={link.label}>
@@ -85,7 +84,7 @@ export function Footer() {
 
           {/* Column 4: Links */}
           <div className={styles.footerLinksCol}>
-            <h4 className={styles.colTitle}>&nbsp;</h4>
+            <div className={styles.headerSpacer} />
             <ul className={styles.linksList}>
               {col3Links.map((link) => (
                 <li key={link.label}>
@@ -98,7 +97,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className={styles.footerBottom}>
+        <div className={styles.footerCopyContainer}>
           <p className={styles.footerCopy}>
             © {new Date().getFullYear()} Secure Guard Security Services. All rights reserved.
           </p>
