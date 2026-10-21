@@ -6,16 +6,16 @@ import { PreFooterCTA } from "@/components/PreFooterCTA";
 
 // Reusable icons for situations and fits
 const situations = [
-  { icon: "🤝", title: "Guest Disputes", desc: "Resolving conflicts calmly and professionally to prevent escalation on the gaming floor." },
-  { icon: "🍺", title: "Alcohol-Related Incidents", desc: "De-escalating situations involving intoxicated guests safely and with minimal disruption." },
-  { icon: "🔒", title: "Restricted Area Access", desc: "Verifying credentials and preventing unauthorized entry into vaults, cages, and back-of-house areas." },
-  { icon: "🚗", title: "Parking Lot Concerns", desc: "Patrolling structures and surface lots to deter vehicle break-ins, loitering, and vandalism." },
-  { icon: "💰", title: "Cash Handling Support", desc: "Providing secure escort and monitoring for cash, chip, and valuable asset movements." },
-  { icon: "👤", title: "Employee Escort Needs", desc: "Ensuring staff safety during late-night shifts, cage operations, and employee parking transfers." },
-  { icon: "👀", title: "Suspicious Behavior", desc: "Identifying and documenting potential theft, gaming irregularities, or security threats." },
-  { icon: "🎨", title: "Theft or Vandalism", desc: "Deterring property damage, vandalism, and reporting unlawful activity on the property." },
+  { icon: "🤝", title: "Guest Disputes", desc: "De-escalating conflicts calmly and professionally to help prevent escalation on the gaming floor." },
+  { icon: "🍺", title: "Alcohol-Related Incidents", desc: "De-escalating situations involving intoxicated guests safely and reporting to venue staff with minimal disruption." },
+  { icon: "🔒", title: "Restricted Area Access", desc: "Supporting controlled access to client-designated areas, subject to casino policies and applicable gaming requirements." },
+  { icon: "🚗", title: "Parking Lot Concerns", desc: "Patrolling structures and surface lots to help deter vehicle break-ins, loitering, and vandalism." },
+  { icon: "💰", title: "Cash Handling Support", desc: "Support authorized on-site escort duties according to defined post orders, training, and coverage arrangements." },
+  { icon: "👤", title: "Employee Escort Needs", desc: "Supporting staff safety during late-night shifts, cage operations, and employee parking transfers when included in post orders." },
+  { icon: "👀", title: "Suspicious Behavior", desc: "Observing, identifying, and documenting potential theft, gaming irregularities, or security concerns for venue management." },
+  { icon: "🎨", title: "Theft or Vandalism", desc: "Deterring property damage and vandalism, and promptly reporting unlawful activity on the property." },
   { icon: "📢", title: "Crowd Control", desc: "Managing entryways, queues, concert venues, and event spaces during peak hours and holidays." },
-  { icon: "🚨", title: "Medical or Emergency Response Support", desc: "Assisting local authorities, managing evacuations, and providing first-responder coordination." },
+  { icon: "🚨", title: "Medical or Emergency Response Support", desc: "Contact emergency services and follow site emergency procedures (officers do not provide clinical or police services unless separately qualified)." },
 ];
 
 const properties = [
@@ -29,10 +29,10 @@ const properties = [
 ];
 
 const coverageOptions = [
-  { service: "Entrance & Access Control", schedule: "24/7 / Continuous", desc: "Monitoring entry points, verifying IDs, checking credentials, and managing guest or staff access." },
-  { service: "Gaming Floor Presence", schedule: "Peak & Late-Night Focus", desc: "High-visibility patrols to monitor behavior, support floor dealers, and deter disputes without interrupting operations." },
-  { service: "Cash Vault & Cage Escorts", schedule: "Flexible Shift Support", desc: "Dedicated escorts for cage staff during cash drops, chip counts, and secure currency movements." },
-  { service: "Parking & Perimeter Patrols", schedule: "Evening & Overnight Focus", desc: "Deterring vehicle theft, vandalism, and ensuring safety for guests and employees in transit." },
+  { service: "Entrance & Access Control", schedule: "Sample: 24/7 by Agreement", desc: "Monitoring entry points, verifying IDs, checking credentials, and managing guest or staff access (24/7 coverage is a sample schedule available by agreement and staffing follows the venue contract)." },
+  { service: "Gaming Floor Presence", schedule: "Sample: Peak & Late-Night", desc: "High-visibility patrols to observe behavior, support floor staff, and help deter disputes under venue direction." },
+  { service: "Cash Vault & Cage Escorts", schedule: "Contracted / By Agreement", desc: "Assigned on-site escort support when contracted and authorized, following defined post orders." },
+  { service: "Parking & Perimeter Patrols", schedule: "Sample: Evening & Overnight", desc: "Scheduled patrols to help deter vehicle theft and vandalism while supporting guest and employee transit." },
 ];
 
 export default function CasinoSecurityPage() {
@@ -64,7 +64,7 @@ export default function CasinoSecurityPage() {
               Protect Guests, Staff, Gaming Areas, Cash Handling, <span className={styles.heroTitleAccent}>and High-Traffic Entertainment Spaces</span>
             </h1>
             <p className={styles.heroSubtitle}>
-              Secure Guard Security Services delivers professional casino security support. We monitor behavior, support floor staff, respond to disputes, and protect restricted areas without disrupting your operations.
+              Secure Guard Security Services delivers professional casino security support. We monitor behavior, support floor staff, respond to disputes, and support controlled access to client-designated areas, subject to casino policies and applicable gaming requirements.
             </p>
             <div className={styles.heroCtas}>
               <a 
@@ -106,14 +106,14 @@ export default function CasinoSecurityPage() {
                 Casinos operate in a fast-moving environment with guests, gaming activity, cash movement, alcohol service, entertainment, parking areas, and late-night traffic.
               </p>
               <p className={styles.bodyText}>
-                Security teams must balance guest experience with risk control. The client needs officers who can monitor behavior, support floor staff, respond to disputes, document incidents, protect restricted areas, and help maintain a safe environment without disrupting operations.
+                Security teams must balance guest experience with risk control. The client needs officers who can monitor behavior, support floor staff, respond to disputes, document incidents, support controlled access to client-designated areas, and help maintain a safer environment without disrupting operations.
               </p>
             </div>
             <div className={styles.whyCards}>
               {[
-                { icon: "🤝", title: "Disputes & Alcohol", desc: "Managing guest conflicts and alcohol-related incidents professionally to protect the gaming floor." },
-                { icon: "💰", title: "Cash & Asset Flows", desc: "Providing secure monitoring and escorts for vaults, cages, and internal movements." },
-                { icon: "🔒", title: "Restricted Access", desc: "Verifying credentials and preventing unauthorized entry into back-of-house areas." },
+                { icon: "🤝", title: "Disputes & Alcohol", desc: "Managing guest conflicts and alcohol-related incidents professionally to support the gaming floor." },
+                { icon: "💰", title: "Cash & Asset Flows", desc: "Provide assigned escort support when contracted and authorized, with cash-in-transit or high-value movement scoped as separate specialized duties." },
+                { icon: "🔒", title: "Restricted Access", desc: "Supporting controlled access to client-designated areas, subject to casino policies and applicable gaming requirements." },
                 { icon: "🚗", title: "Parking & Entrances", desc: "Monitoring structures and entrances to deter theft, vandalism, and loitering." },
               ].map((c) => (
                 <div key={c.title} className={styles.whyCard}>
@@ -154,7 +154,7 @@ export default function CasinoSecurityPage() {
                 Secure Guard provides casino security support for entrance monitoring, floor presence, parking areas, employee access, restricted area control, incident response, escort support, and activity documentation.
               </p>
               <p className={styles.bodyText}>
-                Our security officers can work seamlessly alongside casino management, surveillance teams, hospitality staff, and local authorities when needed, ensuring safety and protecting your brand.
+                Our security officers work alongside casino management, surveillance teams, hospitality staff, and local authorities when needed—supporting safer operations and incident response, with all gaming-floor and surveillance responsibilities subject to venue direction.
               </p>
             </div>
           </div>
@@ -171,7 +171,7 @@ export default function CasinoSecurityPage() {
             </h2>
           </div>
           <p className={styles.bodyTextCenteredLight}>
-            Coverage can be customized to cover 24/7 entry checkpoints, peak weekend hours, overnight parking lot sweeps, or high-risk cage operations. We integrate with your casino&apos;s daily flow.
+            Sample schedules are shown below; 24/7 or peak-hour coverage is available by agreement and staffing follows the venue contract.
           </p>
 
           {/* Coverage Options Table */}
@@ -210,7 +210,7 @@ export default function CasinoSecurityPage() {
                 What This Means <span className={styles.titleAccentGold}>for the Client</span>
               </h2>
               <p className={styles.bodyTextLight}>
-                By deploying Secure Guard, you establish a reliable security presence that supports both management and employees, reduces gaming floor liability, and ensures a safe environment.
+                By deploying Secure Guard, you establish a reliable security presence that supports both management and employees, helps identify and document incidents and supports venue risk-management procedures.
               </p>
             </div>
             <div className={styles.opsFeatures}>

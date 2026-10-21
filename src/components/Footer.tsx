@@ -16,10 +16,10 @@ const col1Links = [
 const col2Links = [
   { label: "Event", href: "https://sgss-event-security-industry.vercel.app/" },
   { label: "Financial Institution", href: "https://sgss-financial-institution-security.vercel.app/" },
-  { label: "Government Facility", href: "https://sgss-government-facility-security-u.vercel.app/" },
+  { label: "Government Facility", href: "https://sgss-government-facility-security.vercel.app/" },
   { label: "Healthcare Facility", href: "https://sgss-healthcare-facility-security.vercel.app/" },
   { label: "High Rise", href: "https://sgss-high-rise-security.vercel.app/" },
-  { label: "Homeowners Association", href: "https://sgss-homeowners-association-securit.vercel.app/" },
+  { label: "Homeowners Association", href: "https://sgss-homeowners-association-security.vercel.app/" },
   { label: "Hotel", href: "https://sgss-hotel-security.vercel.app/" },
   { label: "Mall", href: "https://sgss-mall-security.vercel.app/" },
 ];
@@ -28,7 +28,7 @@ const col3Links = [
   { label: "Manufacturing Facility", href: "https://sgss-manufacturing-facility-securit.vercel.app/" },
   { label: "Religious Facility", href: "https://sgss-religious-facility-security.vercel.app/" },
   { label: "Shopping Center", href: "https://sgss-shopping-center-security.vercel.app/" },
-  { label: "Sporting event", href: "https://sgss-sporting-event-security.vercel.app/" },
+  { label: "Sporting Event", href: "https://sgss-sporting-event-security.vercel.app/" },
   { label: "Storage Facility", href: "https://sgss-storage-facility-security.vercel.app/" },
   { label: "Strike/Union Dispute", href: "https://sgss-strike-union-dispute-security.vercel.app/" },
   { label: "Transportation & Logistics Facility", href: "https://sgss-transportation-logistics-facility-security.vercel.app/" },
