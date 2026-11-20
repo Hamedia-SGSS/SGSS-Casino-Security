@@ -3,29 +3,34 @@ import styles from "./page.module.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PreFooterCTA } from "@/components/PreFooterCTA";
+import {
+  ShieldBadgeIcon,
+  ShieldBadgeType,
+  ShieldCheckIcon,
+} from "@/components/ShieldIcons";
 
 // Reusable icons for situations and fits
-const situations = [
-  { icon: "🤝", title: "Guest Disputes", desc: "De-escalating conflicts calmly and professionally to help prevent escalation on the gaming floor." },
-  { icon: "🍺", title: "Alcohol-Related Incidents", desc: "De-escalating situations involving intoxicated guests safely and reporting to venue staff with minimal disruption." },
-  { icon: "🔒", title: "Restricted Area Access", desc: "Supporting controlled access to client-designated areas, subject to casino policies and applicable gaming requirements." },
-  { icon: "🚗", title: "Parking Lot Concerns", desc: "Patrolling structures and surface lots to help deter vehicle break-ins, loitering, and vandalism." },
-  { icon: "💰", title: "Cash Handling Support", desc: "Support authorized on-site escort duties according to defined post orders, training, and coverage arrangements." },
-  { icon: "👤", title: "Employee Escort Needs", desc: "Supporting staff safety during late-night shifts, cage operations, and employee parking transfers when included in post orders." },
-  { icon: "👀", title: "Suspicious Behavior", desc: "Observing, identifying, and documenting potential theft, gaming irregularities, or security concerns for venue management." },
-  { icon: "🎨", title: "Theft or Vandalism", desc: "Deterring property damage and vandalism, and promptly reporting unlawful activity on the property." },
-  { icon: "📢", title: "Crowd Control", desc: "Managing entryways, queues, concert venues, and event spaces during peak hours and holidays." },
-  { icon: "🚨", title: "Medical or Emergency Response Support", desc: "Contact emergency services and follow site emergency procedures (officers do not provide clinical or police services unless separately qualified)." },
+const situations: { icon: ShieldBadgeType; title: string; desc: string }[] = [
+  { icon: "disputes", title: "Guest Disputes", desc: "De-escalating conflicts calmly and professionally to help prevent escalation on the gaming floor." },
+  { icon: "alcohol", title: "Alcohol-Related Incidents", desc: "De-escalating situations involving intoxicated guests safely and reporting to venue staff with minimal disruption." },
+  { icon: "restricted", title: "Restricted Area Access", desc: "Supporting controlled access to client-designated areas, subject to casino policies and applicable gaming requirements." },
+  { icon: "parking", title: "Parking Lot Concerns", desc: "Patrolling structures and surface lots to help deter vehicle break-ins, loitering, and vandalism." },
+  { icon: "cash", title: "Cash Handling Support", desc: "Support authorized on-site escort duties according to defined post orders, training, and coverage arrangements." },
+  { icon: "escort", title: "Employee Escort Needs", desc: "Supporting staff safety during late-night shifts, cage operations, and employee parking transfers when included in post orders." },
+  { icon: "suspicious", title: "Suspicious Behavior", desc: "Observing, identifying, and documenting potential theft, gaming irregularities, or security concerns for venue management." },
+  { icon: "theft", title: "Theft or Vandalism", desc: "Deterring property damage and vandalism, and promptly reporting unlawful activity on the property." },
+  { icon: "crowd", title: "Crowd Control", desc: "Managing entryways, queues, concert venues, and event spaces during peak hours and holidays." },
+  { icon: "emergency", title: "Medical or Emergency Response Support", desc: "Contact emergency services and follow site emergency procedures (officers do not provide clinical or police services unless separately qualified)." },
 ];
 
-const properties = [
-  { icon: "🎰", label: "Casinos & Gaming Halls" },
-  { icon: "🃏", label: "Card Rooms & Clubs" },
-  { icon: "🏨", label: "Casino Hotels & Resorts" },
-  { icon: "🅿️", label: "Parking Structures" },
-  { icon: "🍽️", label: "Restaurants & Lounges" },
-  { icon: "🎫", label: "Entertainment Venues" },
-  { icon: "🎉", label: "Connected Event Areas" },
+const properties: { icon: ShieldBadgeType; label: string }[] = [
+  { icon: "casino", label: "Casinos & Gaming Halls" },
+  { icon: "cards", label: "Card Rooms & Clubs" },
+  { icon: "hotel", label: "Casino Hotels & Resorts" },
+  { icon: "parking-lot", label: "Parking Structures" },
+  { icon: "dining", label: "Restaurants & Lounges" },
+  { icon: "venue", label: "Entertainment Venues" },
+  { icon: "events", label: "Connected Event Areas" },
 ];
 
 const coverageOptions = [
@@ -94,14 +99,12 @@ export default function CasinoSecurityPage() {
       {/* ===== SECTION 2: REAL-LIFE PROBLEM ===== */}
       <section className={styles.whySection} id="problem">
         <div className="container">
-          <div className={styles.sectionHeader}>
-            <span className={styles.sectionTag}>Real-Life Problem</span>
-            <h2 className={styles.sectionTitle}>
-              Challenges of a <span className={styles.titleAccent}>Fast-Moving Casino Environment</span>
-            </h2>
-          </div>
           <div className={styles.whyGrid}>
             <div className={styles.whyText}>
+              <span className={styles.sectionTag}>Real-Life Problem</span>
+              <h2 className={styles.sectionTitle}>
+                Challenges of a <span className={styles.titleAccent}>Fast-Moving Casino Environment</span>
+              </h2>
               <p className={styles.bodyText}>
                 Casinos operate in a fast-moving environment with guests, gaming activity, cash movement, alcohol service, entertainment, parking areas, and late-night traffic.
               </p>
@@ -110,15 +113,17 @@ export default function CasinoSecurityPage() {
               </p>
             </div>
             <div className={styles.whyCards}>
-              {[
-                { icon: "🤝", title: "Disputes & Alcohol", desc: "Managing guest conflicts and alcohol-related incidents professionally to support the gaming floor." },
-                { icon: "💰", title: "Cash & Asset Flows", desc: "Provide assigned escort support when contracted and authorized, with cash-in-transit or high-value movement scoped as separate specialized duties." },
-                { icon: "🔒", title: "Restricted Access", desc: "Supporting controlled access to client-designated areas, subject to casino policies and applicable gaming requirements." },
-                { icon: "🚗", title: "Parking & Entrances", desc: "Monitoring structures and entrances to deter theft, vandalism, and loitering." },
-              ].map((c) => (
+              {(
+                [
+                  { icon: "disputes", title: "Disputes & Alcohol", desc: "Managing guest conflicts and alcohol-related incidents professionally to support the gaming floor." },
+                  { icon: "cash", title: "Cash & Asset Flows", desc: "Provide assigned escort support when contracted and authorized, with cash-in-transit or high-value movement scoped as separate specialized duties." },
+                  { icon: "restricted", title: "Restricted Access", desc: "Supporting controlled access to client-designated areas, subject to casino policies and applicable gaming requirements." },
+                  { icon: "parking", title: "Parking & Entrances", desc: "Monitoring structures and entrances to deter theft, vandalism, and loitering." },
+                ] as { icon: ShieldBadgeType; title: string; desc: string }[]
+              ).map((c) => (
                 <div key={c.title} className={styles.whyCard}>
                   <div className={styles.whyCardIconWrapper}>
-                    <span className={styles.whyCardIcon}>{c.icon}</span>
+                    <ShieldBadgeIcon type={c.icon} size={44} />
                   </div>
                   <div className={styles.whyCardContent}>
                     <h3 className={styles.whyCardTitle}>{c.title}</h3>
@@ -224,7 +229,9 @@ export default function CasinoSecurityPage() {
                 "Flexible staffing for evenings, weekends, and events",
               ].map((benefit, idx) => (
                 <div key={idx} className={styles.opsFeatureItem}>
-                  <span className={styles.opsFeatureIcon}>🛡️</span>
+                  <span className={styles.opsFeatureIcon}>
+                    <ShieldCheckIcon size={24} />
+                  </span>
                   <span className={styles.opsFeatureLabel}>{benefit}</span>
                 </div>
               ))}
@@ -246,7 +253,9 @@ export default function CasinoSecurityPage() {
             {situations.map((sit, index) => (
               <div key={index} className={styles.situationCard}>
                 <div className={styles.situationHeader}>
-                  <span className={styles.situationIcon}>{sit.icon}</span>
+                  <span className={styles.situationIcon}>
+                    <ShieldBadgeIcon type={sit.icon} size={42} />
+                  </span>
                   <h3 className={styles.situationTitle}>{sit.title}</h3>
                 </div>
                 <p className={styles.situationDesc}>{sit.desc}</p>
@@ -271,7 +280,9 @@ export default function CasinoSecurityPage() {
           <div className={styles.propertiesGrid}>
             {properties.map((prop, idx) => (
               <div key={idx} className={styles.propertyCard}>
-                <div className={styles.propertyIcon}>{prop.icon}</div>
+                <div className={styles.propertyIcon}>
+                  <ShieldBadgeIcon type={prop.icon} size={46} />
+                </div>
                 <span className={styles.propertyLabel}>{prop.label}</span>
               </div>
             ))}

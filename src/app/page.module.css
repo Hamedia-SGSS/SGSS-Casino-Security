@@ -313,12 +313,19 @@
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 48px;
-  align-items: start;
+  align-items: center;
 }
 
 .whyText {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.whyText .sectionTitle {
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 .whyCards {
@@ -345,17 +352,10 @@
 }
 
 .whyCardIconWrapper {
-  width: 48px;
-  height: 48px;
-  background: rgba(29, 44, 72, 0.04);
-  border-radius: var(--radius-sm);
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-}
-
-.whyCardIcon {
-  font-size: 1.6rem;
+  justify-content: flex-start;
+  flex-shrink: 0;
 }
 
 .whyCardContent {
@@ -530,42 +530,50 @@
 
 .opsGrid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 0.85fr 1.35fr;
   gap: 56px;
-  align-items: start;
+  align-items: center;
 }
 
 .opsText {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: left;
 }
 
 .opsFeatures {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
 }
 
 .opsFeatureItem {
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
+  align-items: center;
+  gap: 14px;
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 18px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 16px 20px;
   border-radius: var(--radius-md);
   transition: transform var(--transition), border-color var(--transition), background var(--transition);
 }
 
+.opsFeatureItem:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
 .opsFeatureItem:hover {
-  transform: translateX(4px);
-  border-color: rgba(254, 207, 49, 0.3);
-  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-3px);
+  border-color: rgba(254, 207, 49, 0.35);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .opsFeatureIcon {
-  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
   line-height: 1;
 }
 
@@ -611,7 +619,10 @@
 }
 
 .situationIcon {
-  font-size: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
   line-height: 1;
 }
 
@@ -663,7 +674,9 @@
 }
 
 .propertyIcon {
-  font-size: 2.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1;
 }
 
@@ -714,6 +727,10 @@
   }
 
   .whyCards {
+    grid-template-columns: 1fr;
+  }
+
+  .opsFeatures {
     grid-template-columns: 1fr;
   }
   
